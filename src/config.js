@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 export default {
     // API_ENDPOINT: 'http://localhost:7000/api',
     API_ENDPOINT: 'https://growing-up-server.herokuapp.com/api',
