@@ -65,49 +65,55 @@ export default class AddBaby extends React.Component {
                     className="cancel-icon"
                     onClick={() => this.props.onAddSuccess()}
                 />
-                <div className="label-input">
-                    <label htmlFor="first_name">Name</label>
-                    <input
-                        className="name-input"
-                        id="first_name"
-                        name="first_name"
-                        required
-                    />
+                <div className="baby-form-body">
+                    <div className="baby-labels">
+                        <label htmlFor="first_name">Name</label>
+                        <label htmlFor="weight">Weight (lbs)</label>
+                        <label htmlFor="age">Age (months)</label>
+                    </div>
+                    <div className="baby-inputs">
+                        <input
+                            className="name-input"
+                            id="first_name"
+                            name="first_name"
+                            required
+                        />
+                        <input
+                            className="name-input"
+                            id="weight"
+                            name="weight"
+                            type="number"
+                            placeholder="Enter a number"
+                            required
+                        />
+                        <select name="age" id="age" required>
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                        </select>
+                    </div>
                 </div>
-                <div className="label-input">
-                    <label htmlFor="weight">Weight(lbs)</label>
-                    <input
-                        className="name-input"
-                        id="weight"
-                        name="weight"
-                        required
-                    />
-                </div>
-                <div className="label-input">
-                    <label htmlFor="age">Age(months)</label>
-                    <select name="age" id="age" required>
-                        <option value="0">0</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                        <option value="11">11</option>
-                        <option value="12">12</option>
-                        <option value="13">13</option>
-                        <option value="14">14</option>
-                        <option value="15">15</option>
-                        <option value="16">16</option>
-                        <option value="17">17</option>
-                        <option value="18">18</option>
-                    </select>
-                </div>
-                <button type="submit"> Add </button>
+
+                <button className="baby-button" type="submit">
+                    {' '}
+                    Add{' '}
+                </button>
                 <div role="alert">
                     {error && <p className="error">{error}</p>}
                 </div>

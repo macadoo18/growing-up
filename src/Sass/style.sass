@@ -160,7 +160,7 @@ li
 tr 
     height: 36px
 
-.weight-form, .age-form, .baby-input-container, .baby-age-container, .baby-weight-container, .feed-buttons-container
+.weight-form, .age-form, .baby-age-container, .baby-weight-container, .feed-buttons-container
     +flexRowAndCenter 
     width: 100%
     *:not(:last-child)
@@ -337,8 +337,62 @@ tr
             margin: 15px 15px
 
 .baby-input-container
-    //+flexRowAndCenterWrap
+    position: relative
+    background-color: #C0E9FF;
+    border-radius: 7px
+    width: 300px
+    margin: auto
+    padding-bottom: 4px;
+    padding-top: 20px
+    border: 2px solid #341F78;
+
+.cancel-icon
+    position: absolute;
+    right: 0;
+    top: 0;
+
+.baby-form-body
+    display: flex
+    justify-content: center
+
+.baby-labels
+    display: flex
     flex-direction: column
+    text-align: left
+    font-weight: 500
+    
+
+.baby-labels label
+    margin: 7px 5px
+
+.baby-labels label:nth-child(2),
+.baby-labels label:nth-child(3)
+    padding-top: 2px
+  
+.baby-inputs
+    display: flex
+    flex-direction: column
+
+.name-input
+    height: 20px
+    
+.baby-inputs > select
+    height: 26px
+
+.name-input, .baby-inputs > select
+    border-radius: 4px
+    border: 2px outset darkgrey;
+    margin: 4px
+
+.baby-button
+    display: block
+    margin: 10px auto;
+    width: 100px;
+    height: 30px;
+    border-radius: 4px;
+    font-weight: 600;
+    border-color: #341F78;
+    color: #341F78;
 
 .age-form
     +flexRowAndCenter 
